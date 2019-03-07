@@ -1,0 +1,19 @@
+.jumbotron {
+    background-image: url("/assets/img/burger.jpg");
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: goldenrod;
+}
+
+h1 {
+    text-align: left;
+    font-size: 60px;
+}
+.col {
+    text-align: center;
+    border: groove;
+    border-width: 10px;
+    font-size: 32px;
+    margin: 20px;
+}

@@ -4,6 +4,18 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars")
 
 var app = express();
+
+if (process.env.JAWSDB_URL){
+    var connection = mysql.createConnection(process.env.JAWSDB_URL)
+} else {
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root', 
+        database: 'burgers_db;'
+    });
+}
+
 var PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));

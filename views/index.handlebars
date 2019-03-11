@@ -27,7 +27,7 @@
                         {{#each burgers}}
                         {{#unless devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                        <button type="button" class="btn btn-warning" id="eatburger" data-id="{{this.id}}"
+                        <button type="button" class="pleaseWork btn btn-warning" id="devourit" data-id="{{this.id}}"
                             data-newDevoured="{{devour}}">Devour it!</button>
                         <hr>
                         {{/unless}}
@@ -39,13 +39,13 @@
         <!-- Devoured Burgers -->
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="righthead"><strong>Devoured Burgers</strong></div>
+                <div class="panel-heading"><strong>Devoured Burgers</strong></div>
                 <div class="panel-body">
                     <ul>
                         {{#each burgers}}
-                        {{#if this.devoured}}
+                        {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                        {{!-- <button type="button" class="trashburger btn btn-danger" id ="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button> --}}
+                        {{!-- <button type="button" class="btn btn-danger" id ="devourbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button> --}}
 
                         {{/if}}
                         {{/each}}

@@ -25,20 +25,21 @@ $(function() {
       event.preventDefault();
 
       var id = $(this).data("id");
-        var newDevoured = {
+        var devouredState = $(this).data("devour") 
+        var devoured = {
             devoured: 1
-        };
-  
+        }
       // Send the PUT request.
-      $.ajax("/api/burgers/" + id, {
+      $.ajax("/api/burgers/" + this.id, {
         type: "PUT",
-        data: newDevoured
+        data: devoured
       }).then(
         function() {
-          console.log("changed newBurger", id);
+          console.log("changed newBurger", devouredState);
           // Reload the page to get the updated list
           location.reload();
         }
       );
     });
   });
+

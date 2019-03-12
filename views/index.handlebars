@@ -21,14 +21,14 @@
 
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="lefthead"><strong>New Burgers</strong></div>
+                <div class="panel-heading"><strong>New Burgers</strong></div>
                 <div class="panel-body">
                     <ul>
                         {{#each burgers}}
                         {{#unless devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                        <button type="button" class="pleaseWork btn btn-warning" id="devourit" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}">Devour it!</button>
+                        <button type="button" class="btn btn-warning" id="devourit" data-id="{{this.id}}"
+                            data-devouredState="{{devour}}">Devour it!</button>
                         <hr>
                         {{/unless}}
                         {{/each}}
@@ -44,9 +44,7 @@
                     <ul>
                         {{#each burgers}}
                         {{#if devoured}}
-                        <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-                        {{!-- <button type="button" class="btn btn-danger" id ="devourbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button> --}}
-
+                        {{!-- <span><strong> {{this.id}} - {{this.burger_name}} </strong></span> --}}
                         {{/if}}
                         {{/each}}
                     </ul>

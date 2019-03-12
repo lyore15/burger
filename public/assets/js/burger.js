@@ -21,7 +21,7 @@ $(function() {
       );
     });
   
-    $(".devourit").on("click", function(event) {
+    $("#devourit").on("click", function(event) {
       event.preventDefault();
 
       var id = $(this).data("id");
@@ -30,7 +30,7 @@ $(function() {
             devoured: 1
         }
       // Send the PUT request.
-      $.ajax("/api/burgers/" + this.id, {
+      $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: devoured
       }).then(

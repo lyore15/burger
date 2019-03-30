@@ -8,8 +8,8 @@ if(process.env.JAWSDB_URL){
   conntection = mysql.createConnection({
     host:'localhost',
     user:'root',
-    password: 'hacktheplanet',
-    database: 'todoain_db'
+    password: '',
+    database: 'burger_db'
   })
 }
 
